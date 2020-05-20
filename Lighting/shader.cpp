@@ -30,7 +30,6 @@ char* Shader::read_shader_source(const char* file_path) {
 
 	return buffer;
 }
-
 Shader::Shader(const char* vertex_path, const char* fragment_path){
 	char* vertex_file, *frag_file;
 	GLuint vertex_ID, fragment_ID;
@@ -93,7 +92,6 @@ Shader::Shader(const char* vertex_path, const char* fragment_path){
 	glAttachShader(ID, fragment_ID);
 
 }
-
 void Shader::link(){
 	GLint linked;
 	glLinkProgram(ID);
@@ -113,7 +111,39 @@ void Shader::link(){
 	printf("Successfully linked program ID: %d\n\n", ID);
 
 }
-
 void Shader::use() {
 	glUseProgram(ID);
+}
+
+/*----- Set Uniform Variables -----*/
+void Shader::set_uniform_bool(const char* name, GLboolean &value)const {
+	glUniform1i(glGetUniformLocation(ID, name), value);
+}
+void Shader::set_uniform_int(const char* name, GLint &value) const {
+	glUniform1i(glGetUniformLocation(ID, name), value);
+}
+void Shader::set_uniform_float(const char* name, GLfloat &value)const {
+	glUniform1f(glGetUniformLocation(ID, name), value);
+}
+void Shader::set_uniform_double(const char* name, GLdouble &value)const {
+	glUniform1d(glGetUniformLocation(ID, name), value);
+}
+
+/*----- Set Uniform Vectors -----*/
+void Shader::set_uniform_vec2(const char* name, const glm::vec2 &value) const {
+	glUniform2fv(glGetUniformLocation(ID, name), 1, &value[0]);
+}
+void Shader::set_uniform_vec3(const char* name, const glm::vec3 &value) const {
+	glUniform3fv(glGetUniformLocation(ID, name), 1, &value[0]);
+}
+void Shader::set_uniform_vec4(const char* name, const glm::vec4 &value) const {
+	glUniform4fv(glGetUniformLocation(ID, name), 1, &value[0]);
+}
+
+/*----- Set Uniform Matrices -----*/
+void Shader::set_uniform_mat2(const char* name, const glm::mat2 &value) const {
+	glUniformMatrix2fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &value[0][0]);
+}
+void Shader::set_uniform_mat3(const char* name, const glm::mat3 &value) const {
+	glUniformMatrix3fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &value[0][0]);
 }
