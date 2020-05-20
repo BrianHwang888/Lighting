@@ -19,6 +19,15 @@
     <Filter Include="Source Files\Core Definitions">
       <UniqueIdentifier>{8226d045-7fd7-4ab2-9cd6-9d1e918499b8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{06f0b6b0-2614-4a4c-9bda-fb5f8cf72e4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\vertex">
+      <UniqueIdentifier>{8e387537-88fb-4583-a067-cb79565b690a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\fragment">
+      <UniqueIdentifier>{b31e112e-a733-4b95-9f08-b77b8b4f73c7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -28,6 +37,9 @@
   <ItemGroup>
     <ClCompile Include="shader.cpp">
       <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="lighting_main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
