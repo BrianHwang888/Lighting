@@ -115,10 +115,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="render.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="lighting_main.cpp" />
+    <ClCompile Include="mouse.cpp" />
+    <ClCompile Include="render.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>

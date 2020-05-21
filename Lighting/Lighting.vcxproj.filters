@@ -33,6 +33,15 @@
     <ClInclude Include="shader.h">
       <Filter>Header Files\Core Headers</Filter>
     </ClInclude>
+    <ClInclude Include="mouse.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboard.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -40,6 +49,15 @@
     </ClCompile>
     <ClCompile Include="lighting_main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mouse.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboard.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
