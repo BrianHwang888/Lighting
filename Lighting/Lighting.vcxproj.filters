@@ -28,19 +28,25 @@
     <Filter Include="Shaders\fragment">
       <UniqueIdentifier>{b31e112e-a733-4b95-9f08-b77b8b4f73c7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Rendering Objects Headers">
+      <UniqueIdentifier>{1de13882-ae5a-4c66-9e4e-32ea781554b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering Objects Definitions">
+      <UniqueIdentifier>{9da0b762-21bb-4cc1-b8ab-4f0fe500a5cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
       <Filter>Header Files\Core Headers</Filter>
     </ClInclude>
-    <ClInclude Include="mouse.h">
-      <Filter>Header Files\Core Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="keyboard.h">
-      <Filter>Header Files\Core Headers</Filter>
-    </ClInclude>
     <ClInclude Include="render.h">
       <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="render_object.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="floor.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,14 +56,17 @@
     <ClCompile Include="lighting_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mouse.cpp">
-      <Filter>Source Files\Core Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="keyboard.cpp">
-      <Filter>Source Files\Core Definitions</Filter>
-    </ClCompile>
     <ClCompile Include="render.cpp">
       <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="floor.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="render_object.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

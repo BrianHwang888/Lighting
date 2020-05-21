@@ -77,6 +77,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -115,16 +118,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="keyboard.h" />
-    <ClInclude Include="mouse.h" />
+    <ClInclude Include="floor.h" />
     <ClInclude Include="render.h" />
+    <ClInclude Include="render_object.h" />
     <ClInclude Include="shader.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c" />
+    <ClCompile Include="floor.cpp" />
     <ClCompile Include="lighting_main.cpp" />
-    <ClCompile Include="mouse.cpp" />
     <ClCompile Include="render.cpp" />
+    <ClCompile Include="render_object.cpp" />
     <ClCompile Include="shader.cpp" />
   </ItemGroup>
   <ItemGroup>
