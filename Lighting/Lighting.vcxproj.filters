@@ -42,4 +42,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="basic_fragment.glsl">
+      <Filter>Shaders\fragment</Filter>
+    </None>
+    <None Include="basic_vertex.glsl">
+      <Filter>Shaders\vertex</Filter>
+    </None>
+  </ItemGroup>
 </Project>

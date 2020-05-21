@@ -38,7 +38,7 @@ void main(void) {
 	}
 
 	/*----- Shader Initialization -----*/
-	Shader lighting_program("vertex_shader.glsl", "fragment_shader.glsl");
+	Shader lighting_program("basic_vertex.glsl", "basic_fragment.glsl");
 
 	lighting_program.link();
 
