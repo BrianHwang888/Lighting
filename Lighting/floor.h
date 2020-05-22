@@ -3,11 +3,13 @@
 
 #include "render_object.h"
 
-class floor: public render_object {
+class Floor: public render_object {
 public:
 	void gen_buffer(GLuint program) override;
 	void draw() override;
-	floor();
+	void read_file(const char* file) override;
+	Floor();
+	Floor(const char* file);
 
 protected:
 	glm::vec4* colors;

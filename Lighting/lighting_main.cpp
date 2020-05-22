@@ -7,6 +7,7 @@
 
 #include"shader.h"
 #include"render.h"
+#include"init.h"
 
 #define WINDOW_WIDTH 800
 #define WINDOW_HEIGHT 600
@@ -47,10 +48,13 @@ int main(void) {
 	Shader* shader_array[1] = { &lighting_program };
 
 	lighting_program.link();
+	
+	
+	render_object** rendering_object_array = init_rendering_obj();
 
 	while (!glfwWindowShouldClose(window)) {
 
-		render(shader_array);
+		render(shader_array, rendering_object_array);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();

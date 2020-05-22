@@ -4,6 +4,8 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 #include<glm/common.hpp>
+#include<stdio.h>
+#include<stddef.h>
 
 class render_object {
 protected:
@@ -17,6 +19,7 @@ public:
 
 	virtual void gen_buffer(GLuint program) = 0;
 	virtual void draw() = 0;
+	virtual void read_file(const char* file) = 0;
 
 	void enable_vao(GLuint attrib_loc);
 	void disable_vao(GLuint attrib_loc);

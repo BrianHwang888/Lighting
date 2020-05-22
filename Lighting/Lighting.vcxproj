@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="floor.h" />
+    <ClInclude Include="init.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="render_object.h" />
     <ClInclude Include="shader.h" />
@@ -126,6 +127,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c" />
     <ClCompile Include="floor.cpp" />
+    <ClCompile Include="init.cpp" />
     <ClCompile Include="lighting_main.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="render_object.cpp" />

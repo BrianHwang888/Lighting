@@ -48,6 +48,9 @@
     <ClInclude Include="floor.h">
       <Filter>Header Files\Rendering Objects Headers</Filter>
     </ClInclude>
+    <ClInclude Include="init.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -67,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="init.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

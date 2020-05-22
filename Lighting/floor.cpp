@@ -1,6 +1,6 @@
 #include "floor.h"
 
-floor::floor() {
+Floor::Floor() {
 	vertex_count = 6;
 	vertices = new glm::vec3[vertex_count];
 	colors = new glm::vec4[vertex_count];
@@ -16,7 +16,10 @@ floor::floor() {
 	for (int i = 0; i < vertex_count; i++)
 		colors[i] = glm::vec4(0.0f, 1.0f, 0.0f, 1.0f);
 }
-void floor::gen_buffer(GLuint program) {
+Floor::Floor(const char* file) {
+	read_file(file);
+}
+void Floor::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &vertex_data);
 
@@ -36,7 +39,43 @@ void floor::gen_buffer(GLuint program) {
 	glVertexAttribPointer(vertex_position, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)0);
 	glVertexAttribPointer(vertex_color, 4, GL_FLOAT, GL_FALSE, sizeof(glm::vec4), (void*)(vertex_count * sizeof(glm::vec3)));
 }
-void floor::draw() {
+void Floor::draw() {
 	glBindVertexArray(VAO);
 	glDrawArrays(GL_TRIANGLES, 0, vertex_count);
+}
+void Floor::read_file(const char* file) {
+	FILE* fp;
+	errno_t errno;
+	float x, y, z;
+	int vert_points, index = 0;
+
+	errno = fopen_s(&fp, file, "r");
+	if (errno ^ 0) {
+		fprintf(stderr, "Failed to read file: %s\n", file);
+		exit(EXIT_FAILURE);
+	}
+
+	fscanf_s(fp, "%d", &vertex_count);
+	vertices = new glm::vec3[vertex_count];
+	colors = new glm::vec4[vertex_count];
+
+	for (int poly = 0; poly < vertex_count; poly++) {
+		if (fscanf_s(fp, "%d", &vert_points) && vert_points == 3) {
+			for (int i = 0; i < 3; i++) {
+
+				fscanf_s(fp, "%f", &x);
+				fscanf_s(fp, "%f", &y);
+				fscanf_s(fp, "%f", &z);
+
+				vertices[index] = glm::vec3(x, y, z);
+				colors[index] = glm::vec4(0.25f, 0.25f, 0.25f, 0.65f);
+				index++;
+			}
+		}
+		else {
+			perror("Invalid data format in file\n");
+			system("pause");
+			exit(EXIT_FAILURE);
+		}
+	}
 }
