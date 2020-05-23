@@ -5,6 +5,7 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 
+#include"camera.h"
 #include"shader.h"
 #include"render.h"
 #include"init.h"
@@ -16,6 +17,8 @@ void init_window(int option);
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void keyboard_input_callback(GLFWwindow* window, int key, int scancode, int action, int mod);
 void mouse_input_callback(GLFWwindow* window, double x_pos, double y_pos);
+
+camera* main_camera;
 
 int main(void) {
 	glfwInit();
@@ -49,7 +52,8 @@ int main(void) {
 
 	lighting_program.link();
 	
-	
+	main_camera = new camera;
+
 	render_object** rendering_object_array = init_rendering_obj();
 	init(shader_array, rendering_object_array);
 	while (!glfwWindowShouldClose(window)) {
@@ -74,9 +78,15 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
 void keyboard_input_callback(GLFWwindow* window, int key, int scancode, int action, int mod) {
+	static GLfloat init_time = 0;
+	GLfloat delta_time = 0;
+	GLfloat current_time = glfwGetTime();
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 
+	delta_time = current_time - init_time;
+	init_time = current_time;
+	main_camera->process_input(window, key, action, mod, delta_time);
 }
 void mouse_input_callback(GLFWwindow* window, double x_pos, double y_pos) {
 	static double last_x = WINDOW_WIDTH / 2;
@@ -87,5 +97,5 @@ void mouse_input_callback(GLFWwindow* window, double x_pos, double y_pos) {
 
 	last_x = x_pos;
 	last_y = y_pos;
-
+	main_camera->process_mouse(x_offset, y_offset);
 }

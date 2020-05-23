@@ -51,6 +51,9 @@
     <ClInclude Include="init.h">
       <Filter>Header Files\Core Headers</Filter>
     </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="init.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
       <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
   </ItemGroup>
