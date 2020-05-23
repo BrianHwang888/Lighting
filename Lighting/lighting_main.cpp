@@ -51,7 +51,7 @@ int main(void) {
 	
 	
 	render_object** rendering_object_array = init_rendering_obj();
-
+	init(shader_array, rendering_object_array);
 	while (!glfwWindowShouldClose(window)) {
 
 		render(shader_array, rendering_object_array);
