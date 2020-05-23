@@ -6,6 +6,7 @@ void render(Shader** shader_array, render_object** render_object_array) {
 	shader_array[0]->use();
 	display(shader_array);
 	render_object_array[0]->draw();
+
 }
 
 void display(Shader** shader_array) {

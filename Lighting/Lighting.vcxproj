@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="axies.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="floor.h" />
     <ClInclude Include="init.h" />
@@ -127,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c" />
+    <ClCompile Include="axies.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="floor.cpp" />
     <ClCompile Include="init.cpp" />
