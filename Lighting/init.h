@@ -8,7 +8,9 @@
 #include"camera.h"
 #include"cube.h"
 
-#define NUM_OBJECTS 3
+#define NUM_RENDERING_OBJECTS 3
+#define NUM_STATIC_OBJECTS 2
+#define NUM_DYNAMIC_OBJECTS 1
 
 void init(Shader** shader_array, render_object** rendering_objects_array);
 render_object** init_rendering_obj();

@@ -62,6 +62,7 @@ cube::cube() {
 	for (int i = 0; i < vertex_count; i++) 
 		colors[i] = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	
+	model_matrix = glm::mat4(1.0f);
 }
 void cube::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
@@ -121,4 +122,10 @@ void cube::read_file(const char* file) {
 			exit(EXIT_FAILURE);
 		}
 	}
+}
+void cube::set_model_matrix(glm::mat4 model){
+	model_matrix = model;
+}
+glm::mat4 cube::get_model_matrix() {
+	return model_matrix;
 }
