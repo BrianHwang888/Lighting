@@ -1,12 +1,7 @@
 #ifndef __RENDER_H__
 #define __RENDER_H__
 
-#include"shader.h"
-#include"render_object.h"
-#include"floor.h"
-#include"camera.h"
-
-#define NUM_OBJECTS 2
+#include "init.h"
 
 extern camera* main_camera;
 

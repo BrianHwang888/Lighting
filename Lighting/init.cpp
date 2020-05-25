@@ -12,7 +12,7 @@ render_object** init_rendering_obj() {
 	
 	rendering_object_array[0] = init_floor();
 	rendering_object_array[1] = init_grid();
-
+	rendering_object_array[2] = init_cube();
 	return rendering_object_array;
 }
 Floor* init_floor() {
@@ -23,4 +23,7 @@ camera* init_main_camera() {
 }
 Axies* init_grid() {
 	return new Axies();
+}
+cube* init_cube() {
+	return new cube();
 }

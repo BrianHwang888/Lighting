@@ -120,6 +120,7 @@
   <ItemGroup>
     <ClInclude Include="axies.h" />
     <ClInclude Include="camera.h" />
+    <ClInclude Include="cube.h" />
     <ClInclude Include="floor.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="render.h" />
@@ -130,6 +131,7 @@
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c" />
     <ClCompile Include="axies.cpp" />
     <ClCompile Include="camera.cpp" />
+    <ClCompile Include="cube.cpp" />
     <ClCompile Include="floor.cpp" />
     <ClCompile Include="init.cpp" />
     <ClCompile Include="lighting_main.cpp" />

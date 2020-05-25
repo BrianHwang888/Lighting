@@ -57,6 +57,9 @@
     <ClInclude Include="axies.h">
       <Filter>Header Files\Rendering Objects Headers</Filter>
     </ClInclude>
+    <ClInclude Include="cube.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -84,6 +87,9 @@
       <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
     <ClCompile Include="axies.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="cube.cpp">
       <Filter>Source Files\Rendering Objects Definitions</Filter>
     </ClCompile>
   </ItemGroup>
