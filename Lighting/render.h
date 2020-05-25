@@ -6,6 +6,8 @@
 #include"floor.h"
 #include"camera.h"
 
+#define NUM_OBJECTS 2
+
 extern camera* main_camera;
 
 void render(Shader** shader_array, render_object** render_object_array);

@@ -52,7 +52,7 @@ int main(void) {
 
 	lighting_program.link();
 	
-	main_camera = new camera;
+	main_camera = init_main_camera();
 
 	render_object** rendering_object_array = init_rendering_obj();
 	init(shader_array, rendering_object_array);

@@ -5,7 +5,9 @@ void render(Shader** shader_array, render_object** render_object_array) {
 	glEnable(GL_DEPTH_TEST);
 	shader_array[0]->use();
 	display(shader_array);
-	render_object_array[0]->draw();
+	for (int i = 0; i < NUM_OBJECTS; i++) {
+		render_object_array[i]->draw();
+	}
 
 }
 

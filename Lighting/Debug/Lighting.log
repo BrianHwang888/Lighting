@@ -1,2 +1,6 @@
-﻿  render.cpp
+﻿  axies.cpp
+  init.cpp
+  lighting_main.cpp
+c:\users\potatoe\source\repos\lighting\lighting\lighting_main.cpp(83): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
   Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe

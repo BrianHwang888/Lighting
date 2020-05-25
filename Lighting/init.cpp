@@ -11,9 +11,16 @@ render_object** init_rendering_obj() {
 	render_object** rendering_object_array = new render_object*[NUM_OBJECTS];
 	
 	rendering_object_array[0] = init_floor();
+	rendering_object_array[1] = init_grid();
 
 	return rendering_object_array;
 }
 Floor* init_floor() {
 	return new Floor();
+}
+camera* init_main_camera() {
+	return new camera();
+}
+Axies* init_grid() {
+	return new Axies();
 }
