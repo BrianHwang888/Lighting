@@ -19,6 +19,12 @@ Floor::Floor() {
 Floor::Floor(const char* file) {
 	read_file(file);
 }
+Floor::Floor(const Floor& other) {
+	this->render_object::render_object(other);
+	this->colors = new glm::vec4[vertex_count];
+	for (int i = 0; i < vertex_count; i++)
+		colors[i] = other.colors[i];
+}
 void Floor::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &vertex_data);
@@ -78,4 +84,23 @@ void Floor::read_file(const char* file) {
 			exit(EXIT_FAILURE);
 		}
 	}
+}
+Floor& Floor::operator=(const Floor& rhs) {
+	if (this != &rhs) {
+		if (rhs.vertex_count != vertex_count) {
+			delete[] vertices;
+			delete[] colors;
+			vertex_count = 0;
+			vertices = nullptr;
+			colors = nullptr;
+			vertices = new glm::vec3[rhs.vertex_count];
+			colors = new glm::vec4[rhs.vertex_count];
+			vertex_count = rhs.vertex_count;
+		}
+		for (int i = 0; i < vertex_count; i++) {
+			vertices[i] = rhs.vertices[i];
+			colors[i] = rhs.colors[i];
+		}
+	}
+	return *this;
 }

@@ -64,6 +64,15 @@ cube::cube() {
 	
 	model_matrix = glm::mat4(1.0f);
 }
+cube::cube(const cube& other) {
+	this->render_object::render_object(other);
+	this->colors = new glm::vec4[vertex_count];
+	for (int i = 0; i < vertex_count; i++)
+		this->colors[i] = other.colors[i];
+
+	this->model_matrix = *(new glm::mat4(1.0f));
+	this->model_matrix = other.model_matrix;
+}
 void cube::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &vertex_data);
@@ -128,4 +137,24 @@ void cube::set_model_matrix(glm::mat4 model){
 }
 glm::mat4 cube::get_model_matrix() {
 	return model_matrix;
+}
+cube& cube::operator=(const cube& rhs) {
+	if (this != &rhs) {
+		if (rhs.vertex_count != vertex_count) {
+			delete[] vertices;
+			delete[] colors;
+			vertex_count = 0;
+			vertices = nullptr;
+			colors = nullptr;
+			vertices = new glm::vec3[rhs.vertex_count];
+			colors = new glm::vec4[rhs.vertex_count];
+			vertex_count = rhs.vertex_count;
+		}
+		for (int i = 0; i < vertex_count; i++) {
+			colors[i] = rhs.colors[i];
+			vertices[i] = rhs.vertices[i];
+		}
+		model_matrix = rhs.model_matrix;
+	}
+	return *this;
 }

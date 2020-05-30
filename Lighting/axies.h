@@ -7,10 +7,12 @@ class Axies : public render_object
 {
 public:
 	Axies();
+	Axies(const Axies& other);
 	void gen_buffer(GLuint program) override;
 	void draw() override;
 	void read_file(const char* file) override;
 
+	Axies& operator=(const Axies& rhs);
 protected:
 	glm::vec4* colors;
 

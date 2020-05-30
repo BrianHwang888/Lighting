@@ -16,12 +16,14 @@ protected:
 
 public:
 	render_object();
-
+	render_object(const render_object& object);
 	virtual void gen_buffer(GLuint program) = 0;
 	virtual void draw() = 0;
 	virtual void read_file(const char* file) = 0;
 
 	void enable_vao(GLuint attrib_loc);
 	void disable_vao(GLuint attrib_loc);
+
+	render_object& operator=(render_object& rhs);
 };
 #endif // !__RENDER_OBJECT__

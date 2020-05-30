@@ -10,7 +10,9 @@ public:
 	void read_file(const char* file) override;
 	Floor();
 	Floor(const char* file);
+	Floor(const Floor& other);
 
+	Floor& operator=(const Floor& rhs);
 protected:
 	glm::vec4* colors;
 
