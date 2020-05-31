@@ -1,12 +1,3 @@
-﻿  camera.cpp
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(11): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(68): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(84): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(85): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  init.cpp
-  lighting_main.cpp
-c:\users\potatoe\source\repos\lighting\lighting\lighting_main.cpp(83): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  render.cpp
-c:\users\potatoe\source\repos\lighting\lighting\render.cpp(29): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-  Generating Code...
+﻿  render.cpp
+c:\users\potatoe\source\repos\lighting\lighting\render.cpp(28): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
   Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe

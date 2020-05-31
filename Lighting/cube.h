@@ -1,10 +1,9 @@
 #ifndef __CUBE_H__
 #define __CUBE_H__
 
-#include<glm/gtc/matrix_transform.hpp>
-#include"render_object.h"
+#include"movable_object.h"
 
-class cube :public render_object
+class cube :public movable_object
 {
 public:
 	cube();
@@ -20,7 +19,6 @@ public:
 	cube& operator=(const cube& rhs);
 protected:
 	glm::vec4* colors;
-	glm::mat4 model_matrix;
 
 private:
 

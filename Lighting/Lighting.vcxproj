@@ -123,6 +123,7 @@
     <ClInclude Include="cube.h" />
     <ClInclude Include="floor.h" />
     <ClInclude Include="init.h" />
+    <ClInclude Include="movable_object.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="render_object.h" />
     <ClInclude Include="shader.h" />
@@ -135,6 +136,7 @@
     <ClCompile Include="floor.cpp" />
     <ClCompile Include="init.cpp" />
     <ClCompile Include="lighting_main.cpp" />
+    <ClCompile Include="movable_object.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="render_object.cpp" />
     <ClCompile Include="shader.cpp" />
