@@ -1,9 +1,11 @@
 #include "cube.h"
 
+//Init pos: (5.0f, 10.0f, 0.0f)
 cube::cube() {
 	vertex_count = 36;
 	vertices = new glm::vec3[vertex_count];
 	colors = new glm::vec4[vertex_count];
+	velocity = glm::vec3(1.0f, 0.0f, 1.0f);
 
 	//1st face
 	vertices[0] = glm::vec3(4.5f, 9.5f, 0.5f);
@@ -131,12 +133,6 @@ void cube::read_file(const char* file) {
 			exit(EXIT_FAILURE);
 		}
 	}
-}
-void cube::set_model_matrix(glm::mat4 model){
-	model_matrix = model;
-}
-glm::mat4 cube::get_model_matrix() {
-	return model_matrix;
 }
 cube& cube::operator=(const cube& rhs) {
 	if (this != &rhs) {

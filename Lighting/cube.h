@@ -12,8 +12,6 @@ public:
 	void gen_buffer(GLuint program) override;
 	void draw() override;
 	void read_file(const char* file_path) override;
-	void set_model_matrix(glm::mat4 model);
-	glm::mat4 get_model_matrix();
 	
 
 	cube& operator=(const cube& rhs);
