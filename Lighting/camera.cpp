@@ -1,6 +1,12 @@
 #include"camera.h"
 
 camera::camera() {
+	fovy = 45.0f;
+	aspect = 800.0f / 600.0f;
+	zNear = 0.5f;
+	zFar = 15.0f;
+	angle = 0.0f;
+
 	yaw = -291.150330f;
 	pitch = -44.100040;
 	sensitivity = 0.05f;
@@ -15,9 +21,13 @@ camera::camera() {
 	camera_direction = camera_position + camera_front;
 
 	view_matrix = glm::lookAt(camera_position, camera_direction, camera_up);
+	perspective_matrix = glm::perspective(fovy, aspect, zNear, zFar);
 }
 glm::mat4 camera::get_view_matrix() {
 	return view_matrix;
+}
+glm::mat4 camera::get_perspective_matrix() {
+	return perspective_matrix;
 }
 void camera::update() {
 	glm::vec3 front;

@@ -13,10 +13,18 @@ public:
 	void process_input(GLFWwindow* window, int key, int action, int mod, GLfloat time);
 	void process_mouse(double x_pos, double y_pos);
 	glm::mat4 get_view_matrix();
+	glm::mat4 get_perspective_matrix();
 	void update();
 
 private:
+	GLfloat fovy;
+	GLfloat aspect;
+	GLfloat zNear;
+	GLfloat zFar;
+	GLfloat angle;
+
 	glm::mat4 view_matrix;
+	glm::mat4 perspective_matrix;
 	glm::vec3 camera_position;
 	glm::vec3 camera_direction;
 	glm::vec3 camera_front;
