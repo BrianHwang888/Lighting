@@ -26,14 +26,14 @@ void display(Shader** shader_array) {
 }
 
 void display_cube(Shader** shader_array, cube* light) {
-	static GLfloat time = (GLfloat)glfwGetTime() - time;
+	GLfloat time = glfwGetTime();
 	glm::vec3 displacement = light->get_velocity() * 0.01f;
 
 	displacement.x *= -sin(glm::radians(time * RADIAN));
 	displacement.z *= -cos(glm::radians(time * RADIAN));
 
 	light->translate(displacement);
-
+	printf("x: %f, z: %f, time: %f\n", sin(glm::radians(time)), -cos(glm::radians(time)), time);
 	shader_array[0]->set_uniform_mat4("projection", main_camera->get_perspective_matrix());
 	shader_array[0]->set_uniform_mat4("view", main_camera->get_view_matrix());
 	shader_array[0]->set_uniform_mat4("model", light->get_model_matrix());
