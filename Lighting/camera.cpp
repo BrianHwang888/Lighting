@@ -4,7 +4,7 @@ camera::camera() {
 	fovy = 45.0f;
 	aspect = 800.0f / 600.0f;
 	zNear = 0.5f;
-	zFar = 15.0f;
+	zFar = 30.0f;
 	angle = 0.0f;
 
 	yaw = -100.0f;
