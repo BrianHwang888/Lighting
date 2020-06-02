@@ -1,4 +1,1 @@
-﻿  camera.cpp
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(84): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-c:\users\potatoe\source\repos\lighting\lighting\camera.cpp(85): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
-  Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe
+﻿  Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe

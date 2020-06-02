@@ -63,6 +63,9 @@
     <ClInclude Include="movable_object.h">
       <Filter>Header Files\Rendering Objects Headers</Filter>
     </ClInclude>
+    <ClInclude Include="light.h">
+      <Filter>Header Files\Core Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -97,6 +100,9 @@
     </ClCompile>
     <ClCompile Include="movable_object.cpp">
       <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="light.cpp">
+      <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
