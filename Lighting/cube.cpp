@@ -65,6 +65,7 @@ cube::cube() {
 		colors[i] = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	
 	model_matrix = glm::mat4(1.0f);
+	position = glm::vec3(5.0f, 10.0f, 0.0f);
 }
 cube::cube(const cube& other) {
 	this->render_object::render_object(other);
@@ -74,6 +75,7 @@ cube::cube(const cube& other) {
 
 	this->model_matrix = *(new glm::mat4(1.0f));
 	this->model_matrix = other.model_matrix;
+	this->velocity = other.velocity;
 }
 void cube::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
@@ -151,6 +153,7 @@ cube& cube::operator=(const cube& rhs) {
 			vertices[i] = rhs.vertices[i];
 		}
 		model_matrix = rhs.model_matrix;
+		velocity = rhs.velocity;
 	}
 	return *this;
 }

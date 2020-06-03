@@ -124,6 +124,7 @@
     <ClInclude Include="floor.h" />
     <ClInclude Include="init.h" />
     <ClInclude Include="light.h" />
+    <ClInclude Include="light_cube.h" />
     <ClInclude Include="movable_object.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="render_object.h" />
@@ -138,6 +139,7 @@
     <ClCompile Include="init.cpp" />
     <ClCompile Include="light.cpp" />
     <ClCompile Include="lighting_main.cpp" />
+    <ClCompile Include="light_cube.cpp" />
     <ClCompile Include="movable_object.cpp" />
     <ClCompile Include="render.cpp" />
     <ClCompile Include="render_object.cpp" />

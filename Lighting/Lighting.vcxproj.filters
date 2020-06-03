@@ -66,6 +66,9 @@
     <ClInclude Include="light.h">
       <Filter>Header Files\Core Headers</Filter>
     </ClInclude>
+    <ClInclude Include="light_cube.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -103,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="light.cpp">
       <Filter>Source Files\Core Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="light_cube.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

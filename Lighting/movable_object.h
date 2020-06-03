@@ -16,6 +16,7 @@ public:
 	glm::mat4 get_model_matrix();
 
 protected:
+	glm::vec3 position;
 	glm::mat4 model_matrix;
 	glm::vec3 velocity;
 };
