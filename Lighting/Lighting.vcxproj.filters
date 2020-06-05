@@ -118,5 +118,11 @@
     <None Include="basic_vertex.glsl">
       <Filter>Shaders\vertex</Filter>
     </None>
+    <None Include="lighting_fragment.glsl">
+      <Filter>Shaders\fragment</Filter>
+    </None>
+    <None Include="lighting_vertex.glsl">
+      <Filter>Shaders\vertex</Filter>
+    </None>
   </ItemGroup>
 </Project>
