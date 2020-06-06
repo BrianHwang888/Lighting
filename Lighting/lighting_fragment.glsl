@@ -8,7 +8,7 @@ uniform vec3 light_color;
 uniform vec3 light_pos;
 uniform vec3 viewer_pos;
 
-unuiform int shininess;
+uniform int shininess;
 uniform float ambient_strength;
 uniform float specular_strength;
 uniform bool is_ambient_lighting;
@@ -28,7 +28,7 @@ void main(){
 	else if(is_diffuse_lighting){
 		vec3 norm = normalize(normal);
 		vec3 light_dir = normalize(light_pos - frag_pos);
-		float diff = max(dot(norm, light_dir));
+		float diff = max(dot(norm, light_dir), 0.0f);
 		vec3 ambient = ambient_strength * light_color;
 		vec3 diffuse = diff * light_color;
 		result = (ambient + diffuse) * color;
@@ -42,7 +42,7 @@ void main(){
 		float spec = pow(max(dot(viewer_dir, reflect_dir), 0.0f), shininess);
 
 		vec3 ambient = ambient_strength * light_color;
-		float diff = max(dot(norm, light_dir));
+		float diff = max(dot(norm, light_dir), 0.0f);
 		vec3 diffuse = diff * light_color;
 		vec3 specular = specular_strength * spec * light_color;
 		result = (ambient + diffuse + specular) * color;

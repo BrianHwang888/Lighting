@@ -1,8 +1,8 @@
 #ifndef __LIGHT__H__
 #define __LIGHT__H__
 
-#include<glfw/glfw3.h>
 #include<glad/glad.h>
+#include<GLFW/glfw3.h>
 #include<glm/common.hpp>
 
 class light {

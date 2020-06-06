@@ -47,9 +47,11 @@ int main(void) {
 	}
 
 	/*----- Shader Initialization -----*/
-	Shader lighting_program("basic_vertex.glsl", "basic_fragment.glsl");
-	Shader* shader_array[1] = { &lighting_program };
+	Shader basic_program("basic_vertex.glsl", "basic_fragment.glsl");
+	Shader lighting_program("lighting_vertex.glsl", "lighting_fragment.glsl");
+	Shader* shader_array[2] = { &basic_program, &lighting_program };
 
+	basic_program.link();
 	lighting_program.link();
 	
 	main_camera = init_main_camera();
