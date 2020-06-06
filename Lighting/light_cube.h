@@ -13,8 +13,9 @@ public:
 	
 	light_cube& operator=(const light_cube& rhs) ;
 
-private:
+protected:
 	light* cube_light;
+	glm::vec3* normals;
 
 };
 
