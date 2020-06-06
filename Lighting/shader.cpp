@@ -51,7 +51,7 @@ Shader::Shader(const char* vertex_path, const char* fragment_path){
 	if (!compiled) {
 		GLint log_size;
 		char* log_msg;
-		fprintf(stderr, "%s failed to compiled]n", vertex_path);
+		fprintf(stderr, "%s failed to compiled\n", vertex_path);
 		glGetShaderiv(vertex_ID, GL_INFO_LOG_LENGTH, &log_size);
 		log_msg = new char[log_size];
 		glGetShaderInfoLog(vertex_ID, log_size, NULL, log_msg);
@@ -68,10 +68,10 @@ Shader::Shader(const char* vertex_path, const char* fragment_path){
 	if (!compiled) {
 		GLint log_size;
 		char* log_msg;
-		fprintf(stderr, "%s failed to compiled]n", fragment_path);
-		glGetShaderiv(vertex_ID, GL_INFO_LOG_LENGTH, &log_size);
+		fprintf(stderr, "%s failed to compiled\n", fragment_path);
+		glGetShaderiv(fragment_ID, GL_INFO_LOG_LENGTH, &log_size);
 		log_msg = new char[log_size];
-		glGetShaderInfoLog(vertex_ID, log_size, NULL, log_msg);
+		glGetShaderInfoLog(fragment_ID, log_size, NULL, log_msg);
 		fprintf(stderr, "Reason: %s\n", log_msg);
 		delete[] log_msg;
 		system("pause");
