@@ -11,7 +11,8 @@ public:
 	void scale(glm::vec3 scale_factor);
 	void set_velocity(glm::vec3 velocity);
 	void set_model_matrix(glm::mat4 model);
-
+	
+	glm::vec3 get_position();
 	glm::vec3 get_velocity();
 	glm::mat4 get_model_matrix();
 

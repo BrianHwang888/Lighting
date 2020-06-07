@@ -53,4 +53,5 @@ void display_light_cube(Shader** shader_array, light_cube* cube) {
 	shader_array[1]->set_uniform_mat4("view", main_camera->get_view_matrix());
 	shader_array[1]->set_uniform_mat4("model", cube->get_model_matrix());
 	shader_array[1]->set_uniform_vec3("light_color", cube->get_light_color());
+	shader_array[1]->set_uniform_vec3("light_pos", )
 }
