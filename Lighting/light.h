@@ -11,12 +11,11 @@ typedef struct light_type{ int light_type; }light_type;
 class light {
 public:
 	light();
-	light(light& other);
+	light(const light& other);
 	light(glm::vec3 light_pos, glm::vec4 light_color);
 
-	int get_type();
+	int get_type() const;
 	float ambient_strength;
-	float diffuse_strength;
 	float specular_strength;
 
 	void set_color(glm::vec4 light_color);
@@ -24,10 +23,10 @@ public:
 	void set_as_diffuse(float amb_strength, float diff_strength);
 	void set_as_specular(float amb_strength, float diff_strength, float spec_strength);
 	
-	glm::vec3 get_light_position();
-	glm::vec4 get_light_color();
+	glm::vec3 get_light_position() const;
+	glm::vec4 get_light_color() const;
 	
-	light& operator=(light& rhs);
+	light& operator=(const light& rhs);
 
 	~light();
 

@@ -17,4 +17,6 @@ Floor* init_floor();
 camera* init_main_camera();
 Axies* init_grid();
 cube* init_cube();
+light_cube* init_light_cube();
+
 #endif

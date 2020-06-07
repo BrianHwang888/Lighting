@@ -1,3 +1,4 @@
 ﻿  render.cpp
-c:\users\potatoe\source\repos\lighting\lighting\render.cpp(31): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\potatoe\source\repos\lighting\lighting\render.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\potatoe\source\repos\lighting\lighting\render.cpp(45): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
   Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe

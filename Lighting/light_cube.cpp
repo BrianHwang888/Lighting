@@ -19,6 +19,7 @@ light_cube::light_cube(const light_cube& other) {
 
 }
 light_cube::~light_cube() {}
+int light_cube::get_light_type() { return cube_light->get_type(); }
 void light_cube::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &vertex_data);
@@ -44,7 +45,9 @@ void light_cube::gen_buffer(GLuint program) {
 
 }
 void light_cube::set_light_color(glm::vec4 light_color) { cube_light->set_color(light_color); }
-glm::vec4 light_cube::get_light_color() { return cube_light->get_light_color();  }
+float light_cube::get_ambient_strength() { return cube_light->ambient_strength; }
+float light_cube::get_specular_strength() { return cube_light->specular_strength; }
+glm::vec4 light_cube::get_light_color() { return cube_light->get_light_color(); }
 light_cube& light_cube::operator=(const light_cube& rhs) {
 	if (this != &rhs) {
 		cube::operator=(rhs);
