@@ -12,7 +12,7 @@ render_object** init_rendering_obj() {
 	
 	rendering_object_array[0] = init_floor();
 	rendering_object_array[1] = init_grid();
-	rendering_object_array[2] = init_cube();
+	rendering_object_array[2] = init_light_cube();
 	return rendering_object_array;
 }
 Floor* init_floor() {
@@ -26,4 +26,7 @@ Axies* init_grid() {
 }
 cube* init_cube() {
 	return new cube();
+}
+light_cube* init_light_cube() {
+	return new light_cube();
 }

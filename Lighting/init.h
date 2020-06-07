@@ -2,11 +2,10 @@
 #define __INIT_H__
 
 #include"shader.h"
-#include"render_object.h"
 #include"floor.h"
 #include"axies.h"
 #include"camera.h"
-#include"cube.h"
+#include"light_cube.h"
 
 #define NUM_RENDERING_OBJECTS 3
 #define NUM_STATIC_OBJECTS 2

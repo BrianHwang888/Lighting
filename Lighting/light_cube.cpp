@@ -43,6 +43,8 @@ void light_cube::gen_buffer(GLuint program) {
 	glVertexAttribPointer(vertex_normal, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (void*)(vertex_count * (sizeof(glm::vec3) + sizeof(glm::vec4))));
 
 }
+void light_cube::set_light_color(glm::vec4 light_color) { cube_light->set_color(light_color); }
+glm::vec4 light_cube::get_light_color() { return cube_light->get_light_color();  }
 light_cube& light_cube::operator=(const light_cube& rhs) {
 	if (this != &rhs) {
 		cube::operator=(rhs);

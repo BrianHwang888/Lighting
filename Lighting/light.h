@@ -9,6 +9,9 @@ class light {
 public:
 	light();
 	light(glm::vec3 light_pos, glm::vec4 light_color);
+	void set_color(glm::vec4 light_color);
+	glm::vec4 get_light_color();
+	
 	~light();
 
 protected:
