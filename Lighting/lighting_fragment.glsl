@@ -1,5 +1,5 @@
 #version 330 core
-
+/*----- light_type value: 0:ambient light; 1:diffuse light; 2: specular light -----*/
 in vec3 color;
 in vec3 normal;
 in vec3 frag_pos;
@@ -11,21 +11,19 @@ uniform vec3 viewer_pos;
 uniform int shininess;
 uniform float ambient_strength;
 uniform float specular_strength;
-uniform bool is_ambient_lighting;
-uniform bool is_diffuse_lighting;
-uniform bool is_specular_lighting;
+uniform int light_type;
 
 out vec4 frag_color;
 
 void main(){
 	vec3 result;
 	
-	if(is_ambient_lighting){
+	if(light_type == 0){
 		vec3 ambient = ambient_strength * light_color;
 		result = ambient * color;
 	}
 
-	else if(is_diffuse_lighting){
+	else if(light_type == 1){
 		vec3 norm = normalize(normal);
 		vec3 light_dir = normalize(light_pos - frag_pos);
 		float diff = max(dot(norm, light_dir), 0.0f);
@@ -34,7 +32,7 @@ void main(){
 		result = (ambient + diffuse) * color;
 	}
 
-	else if(is_specular_lighting){
+	else if(light_type == 2){
 		vec3 norm = normalize(normal);
 		vec3 viewer_dir = normalize(viewer_pos - frag_pos);
 		vec3 light_dir = normalize(light_pos - light_pos);

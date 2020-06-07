@@ -23,12 +23,9 @@ camera::camera() {
 	view_matrix = glm::lookAt(camera_position, camera_direction, camera_up);
 	perspective_matrix = glm::perspective(fovy, aspect, zNear, zFar);
 }
-glm::mat4 camera::get_view_matrix() {
-	return view_matrix;
-}
-glm::mat4 camera::get_perspective_matrix() {
-	return perspective_matrix;
-}
+glm::vec3 camera::get_position() { return camera_position; }
+glm::mat4 camera::get_view_matrix() { return view_matrix; }
+glm::mat4 camera::get_perspective_matrix() { return perspective_matrix; }
 void camera::update() {
 	glm::vec3 front;
 	front.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));

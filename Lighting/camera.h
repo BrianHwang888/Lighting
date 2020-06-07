@@ -12,6 +12,7 @@ public:
 	camera();
 	void process_input(GLFWwindow* window, int key, int action, int mod, GLfloat time);
 	void process_mouse(double x_pos, double y_pos);
+	glm::vec3 get_position();
 	glm::mat4 get_view_matrix();
 	glm::mat4 get_perspective_matrix();
 	void update();

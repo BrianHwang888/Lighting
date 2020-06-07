@@ -47,11 +47,14 @@ void display_light_cube(Shader** shader_array, light_cube* cube) {
 
 	displacement.x *= -sin(glm::radians(time * RADIAN));
 	displacement.z *= -cos(glm::radians(time * RADIAN));
-
+	
 	cube->translate(displacement);
 	shader_array[1]->set_uniform_mat4("projection", main_camera->get_perspective_matrix());
 	shader_array[1]->set_uniform_mat4("view", main_camera->get_view_matrix());
 	shader_array[1]->set_uniform_mat4("model", cube->get_model_matrix());
 	shader_array[1]->set_uniform_vec3("light_color", cube->get_light_color());
-	shader_array[1]->set_uniform_vec3("light_pos", )
+	shader_array[1]->set_uniform_vec3("light_pos", cube->get_position());
+	shader_array[1]->set_uniform_vec3("viewer_pos", main_camera->get_position());
+	shader_array[1]->set_uniform_bool("is_specular_lighting", );
+
 }
