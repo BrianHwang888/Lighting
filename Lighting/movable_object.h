@@ -2,9 +2,9 @@
 #define __MOVEABLE_OBJ_H__
 
 #include<glm/gtc/matrix_transform.hpp>
-#include "render_object.h"
+#include "color_object.h"
 
-class movable_object: public render_object{
+class movable_object: public color_obj{
 public:
 	void translate(glm::vec3 disposition);
 	void rotate(GLfloat angle, glm::vec3 axies);

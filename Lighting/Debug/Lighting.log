@@ -1,2 +1,10 @@
-﻿  color_object.cpp
+﻿  cube.cpp
+  init.cpp
+  light_cube.cpp
+  lighting_main.cpp
+c:\users\potatoe\source\repos\lighting\lighting\lighting_main.cpp(85): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  render.cpp
+c:\users\potatoe\source\repos\lighting\lighting\render.cpp(32): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\potatoe\source\repos\lighting\lighting\render.cpp(45): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
   Lighting.vcxproj -> C:\Users\potatoe\source\repos\Lighting\Debug\Lighting.exe

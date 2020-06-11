@@ -1,9 +1,9 @@
 #ifndef __FLOOR_H__
 #define __FLOOR_H__
 
-#include "render_object.h"
+#include"color_object.h"
 
-class Floor: public render_object {
+class Floor: public color_obj {
 public:
 	void gen_buffer(GLuint program);
 	void draw();
@@ -13,8 +13,6 @@ public:
 	Floor(const Floor& other);
 
 	Floor& operator=(const Floor& rhs);
-protected:
-	glm::vec4* colors;
 
 private:
 };

@@ -1,9 +1,9 @@
 #ifndef __AXIES_H__
 #define __AXIES_H__
 
-#include"render_object.h"
+#include"color_object.h"
 
-class Axies : public render_object
+class Axies : public color_obj
 {
 public:
 	Axies();
@@ -13,8 +13,7 @@ public:
 	void read_file(const char* file) override;
 
 	Axies& operator=(const Axies& rhs);
-protected:
-	glm::vec4* colors;
+
 
 private:
 };

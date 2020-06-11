@@ -3,6 +3,7 @@
 render_object::render_object() {};
 
 render_object::render_object(const render_object& object) {
+	delete[] vertices;
 	this->vertex_count = object.vertex_count;
 	this->vertices = new glm::vec3[vertex_count];
 	for (int i = 0; i < vertex_count; i++)

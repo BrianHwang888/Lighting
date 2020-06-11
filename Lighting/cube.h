@@ -2,7 +2,6 @@
 #define __CUBE_H__
 
 #include"movable_object.h"
-#include"light.h"
 
 class cube :public movable_object
 {
@@ -16,10 +15,6 @@ public:
 	
 
 	cube& operator=(const cube& rhs);
-protected:
-	glm::vec4* colors;
-
-private:
 
 };
 
