@@ -21,7 +21,6 @@ public:
 
 protected:
 	light* cube_light;
-	glm::vec3* normals;
 
 };
 

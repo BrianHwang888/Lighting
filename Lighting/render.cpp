@@ -14,8 +14,8 @@ void render(Shader** shader_array, render_object** render_object_array) {
 		render_object_array[i]->draw();
 	}
 
-	shader_array[1]->use();
-	display_light_cube(shader_array, main_light);
+	shader_array[0]->use();
+	display_cube(shader_array, main_light);
 	main_light->draw();
 }
 
