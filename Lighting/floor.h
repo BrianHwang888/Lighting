@@ -5,9 +5,9 @@
 
 class Floor: public render_object {
 public:
-	void gen_buffer(GLuint program) override;
-	void draw() override;
-	void read_file(const char* file) override;
+	void gen_buffer(GLuint program);
+	void draw();
+	void read_file(const char* file);
 	Floor();
 	Floor(const char* file);
 	Floor(const Floor& other);

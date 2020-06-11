@@ -24,6 +24,6 @@ public:
 	void enable_vao(GLuint attrib_loc);
 	void disable_vao(GLuint attrib_loc);
 
-	render_object& operator=(render_object& rhs);
+	render_object& operator=(const render_object& rhs);
 };
 #endif // !__RENDER_OBJECT__

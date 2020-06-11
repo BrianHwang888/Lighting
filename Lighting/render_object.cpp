@@ -14,7 +14,7 @@ void render_object::enable_vao(GLuint attrib_loc) {
 void render_object::disable_vao(GLuint attrib_loc) {
 	glDisableVertexAttribArray(attrib_loc);
 }
-render_object& render_object::operator=(render_object& rhs) {
+render_object& render_object::operator=(const render_object& rhs) {
 	if (this != &rhs) {
 		if (rhs.vertex_count != vertex_count) {
 			delete[] vertices;
