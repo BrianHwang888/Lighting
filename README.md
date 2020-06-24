@@ -1,5 +1,3 @@
-This is a lighting/shadows OpenGL program 
+This is a simple lighting/shadows OpenGL program 
 
-Things to Do:
-	- Fix camera movement
 	
