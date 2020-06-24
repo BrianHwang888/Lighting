@@ -13,8 +13,5 @@ public:
 	void read_file(const char* file) override;
 
 	Axies& operator=(const Axies& rhs);
-
-
-private:
 };
 #endif // !__AXIES_H__

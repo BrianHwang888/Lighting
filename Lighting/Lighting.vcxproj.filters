@@ -72,6 +72,12 @@
     <ClInclude Include="color_object.h">
       <Filter>Header Files\Rendering Objects Headers</Filter>
     </ClInclude>
+    <ClInclude Include="shading_object.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="non_color_object.h">
+      <Filter>Header Files\Rendering Objects Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="shader.cpp">
@@ -84,9 +90,6 @@
       <Filter>Source Files\Core Definitions</Filter>
     </ClCompile>
     <ClCompile Include="floor.cpp">
-      <Filter>Source Files\Rendering Objects Definitions</Filter>
-    </ClCompile>
-    <ClCompile Include="render_object.cpp">
       <Filter>Source Files\Rendering Objects Definitions</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c">
@@ -114,6 +117,12 @@
       <Filter>Source Files\Rendering Objects Definitions</Filter>
     </ClCompile>
     <ClCompile Include="color_object.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="non_color_object.cpp">
+      <Filter>Source Files\Rendering Objects Definitions</Filter>
+    </ClCompile>
+    <ClCompile Include="shading_object.cpp">
       <Filter>Source Files\Rendering Objects Definitions</Filter>
     </ClCompile>
   </ItemGroup>

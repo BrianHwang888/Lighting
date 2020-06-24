@@ -2,12 +2,14 @@
 
 void init(Shader** shader_array, render_object** rendering_object_array) {
 	
-	for (int i = 0; i < NUM_STATIC_OBJECTS; i++) {
+	for (int i = 1; i < NUM_RENDERING_OBJECTS; i++) {
 		rendering_object_array[i]->gen_buffer(shader_array[0]->ID);
 	}
-	rendering_object_array[2]->gen_buffer(shader_array[1]->ID);
-	glClearColor(0.529f, 0.807f, 0.92f, 1.0f);
+	rendering_object_array[0]->gen_buffer(shader_array[1]->ID);
+	//glClearColor(0.529f, 0.807f, 0.92f, 1.0f);
+	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }
+//Returns rendering obj array; [0]: floor, [1]: grid, [2]: light_cube
 render_object** init_rendering_obj() {
 	render_object** rendering_object_array = new render_object*[NUM_RENDERING_OBJECTS];
 	

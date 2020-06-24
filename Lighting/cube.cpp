@@ -5,7 +5,10 @@ cube::cube() {
 	vertex_count = 36;
 	vertices = new glm::vec3[vertex_count];
 	colors = new glm::vec4[vertex_count];
-	velocity = glm::vec3(1.0f, 0.0f, 1.0f);
+
+	model = new movable_object();
+
+	
 
 	//1st face
 	vertices[0] = glm::vec3(4.5f, 9.5f, 0.5f);
@@ -64,18 +67,23 @@ cube::cube() {
 	for (int i = 0; i < vertex_count; i++) 
 		colors[i] = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	
-	model_matrix = glm::mat4(1.0f);
-	position = glm::vec3(5.0f, 10.0f, 0.0f);
+	model->set_model_matrix(glm::mat4(1.0f));
+	model->set_position(glm::vec3(5.0f, 10.0f, 0.0f));
+	model->set_velocity(glm::vec3(1.0f, 1.0f, 1.0f));
 }
 cube::cube(const cube& other) {
-	this->render_object::render_object(other);
-	this->colors = new glm::vec4[vertex_count];
-	for (int i = 0; i < vertex_count; i++)
+	vertex_count = 0;
+	delete[] vertices;
+	delete[] colors;
+	this->vertices = new glm::vec3[other.vertex_count];
+	this->colors = new glm::vec4[other.vertex_count];
+	for (int i = 0; i < vertex_count; i++) {
+		this->vertices[i] = other.vertices[i];
 		this->colors[i] = other.colors[i];
+	}
 
-	this->model_matrix = *(new glm::mat4(1.0f));
-	this->model_matrix = other.model_matrix;
-	this->velocity = other.velocity;
+	this->model->set_model_matrix(other.model->get_model_matrix());
+	this->model->set_velocity(other.model->get_velocity()); 
 }
 void cube::gen_buffer(GLuint program) {
 	glGenVertexArrays(1, &VAO);
@@ -152,8 +160,8 @@ cube& cube::operator=(const cube& rhs) {
 			colors[i] = rhs.colors[i];
 			vertices[i] = rhs.vertices[i];
 		}
-		model_matrix = rhs.model_matrix;
-		velocity = rhs.velocity;
+		model->set_model_matrix(rhs.model->get_model_matrix());
+		model->set_velocity(rhs.model->get_velocity());
 	}
 	return *this;
 }

@@ -1,11 +1,14 @@
 #ifndef __CUBE_H__
 #define __CUBE_H__
 
+#include"color_object.h"
 #include"movable_object.h"
 
-class cube :public movable_object
+class cube :public color_obj
 {
 public:
+	movable_object* model;
+
 	cube();
 	cube(const cube& other);
 

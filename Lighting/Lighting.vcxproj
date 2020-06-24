@@ -127,9 +127,11 @@
     <ClInclude Include="light.h" />
     <ClInclude Include="light_cube.h" />
     <ClInclude Include="movable_object.h" />
+    <ClInclude Include="non_color_object.h" />
     <ClInclude Include="render.h" />
     <ClInclude Include="render_object.h" />
     <ClInclude Include="shader.h" />
+    <ClInclude Include="shading_object.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\..\..\Coding\glad\src\glad.c" />
@@ -143,9 +145,10 @@
     <ClCompile Include="lighting_main.cpp" />
     <ClCompile Include="light_cube.cpp" />
     <ClCompile Include="movable_object.cpp" />
+    <ClCompile Include="non_color_object.cpp" />
     <ClCompile Include="render.cpp" />
-    <ClCompile Include="render_object.cpp" />
     <ClCompile Include="shader.cpp" />
+    <ClCompile Include="shading_object.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="basic_fragment.glsl" />

@@ -8,22 +8,12 @@
 #include<stddef.h>
 
 class render_object {
-protected:
-	glm::vec3* vertices;
-	GLuint VAO;
-	GLuint vertex_data;
-	int vertex_count;
-
 public:
-	render_object();
-	render_object(const render_object& object);
 	virtual void gen_buffer(GLuint program) = 0;
 	virtual void draw() = 0;
 	virtual void read_file(const char* file) = 0;
+	virtual void enable_vao(GLuint attrib_loc) = 0;
+	virtual void disable_vao(GLuint attrib_loc) = 0;
 
-	void enable_vao(GLuint attrib_loc);
-	void disable_vao(GLuint attrib_loc);
-
-	render_object& operator=(const render_object& rhs);
 };
 #endif // !__RENDER_OBJECT__

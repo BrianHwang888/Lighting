@@ -1,9 +1,9 @@
 #ifndef __FLOOR_H__
 #define __FLOOR_H__
 
-#include"color_object.h"
+#include"shading_object.h"
 
-class Floor: public color_obj {
+class Floor: public shading_obj {
 public:
 	void gen_buffer(GLuint program);
 	void draw();
@@ -13,8 +13,6 @@ public:
 	Floor(const Floor& other);
 
 	Floor& operator=(const Floor& rhs);
-
-private:
 };
 
 #endif // !__FLOOR_H__
